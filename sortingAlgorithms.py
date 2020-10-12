@@ -1,7 +1,3 @@
-
-
-
-
 #Bubble sort - Start
 '''Bubble sort is the one usually taught in introductory CS classes since it clearly demonstrates how sort works while being simple and easy to understand. Bubble sort steps through the list and compares adjacent pairs of elements. The elements are swapped if they are in the wrong order. The pass through the unsorted portion of the list is repeated until the list is sorted. Because Bubble sort repeatedly passes through the unsorted part of the list, it has a worst case complexity of O(n²).
 '''
