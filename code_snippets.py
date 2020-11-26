@@ -260,3 +260,65 @@ print(b) # -1
 d = {'a': 1, 'b': 2}
 
 print(d.get('c', 3)) # 3
+
+
+##### reversing a string
+my_string = "ABCDE"
+reversed_string = my_string[::-1]
+
+print (reversed_string)
+
+
+##### title case
+my_string = "my name is ian salandy"
+new_string = my_string.title()
+
+print (new_string)
+
+
+##### find unique elements
+
+my_string = "aavvccccddddeee"
+
+#convert string to set
+temp_set = set(my_string)
+
+new_string = ''.join(temp_set)
+print(new_string)
+
+
+##### list comprehension
+original_list = [1,2,3,4]
+new_list = [2*x for x in original_list]
+
+print(new_list)
+
+
+##### swap values
+a = 1
+b = 2
+
+a,b = b,a
+
+
+##### split into list of substrings
+string_1 = "My name is Ian Salandy"
+
+print(string_1.split())
+
+
+##### try block
+a, b = 1,0
+
+try:
+    print(a/b)
+    # exception raised when b is 0
+except ZeroDivisionError:
+    print("division by zero")
+else:
+    print("no exceptions raised")
+finally:
+    print("Run this always")
+
+
+#####
