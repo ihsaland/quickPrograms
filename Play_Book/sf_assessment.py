@@ -15,11 +15,8 @@ import sys
 open_list = ["[", "{", "("]
 close_list = ["]", "}", ")"]
 
-
 def balance(arr):
-    # Write your code here
     stack = []
-    print (arr)
     for i in arr:
         if i in open_list:
             stack.append(i)
@@ -30,20 +27,15 @@ def balance(arr):
                 stack.pop()
             else:
                 print("Not Valid")
-
     if len(stack) == 0:
         print("Valid")
     else:
         print("Not Valid")
 
-
 if __name__ == '__main__':
     arr_count = int(input().strip())
-
     arr = []
-
     for _ in range(arr_count):
         arr_item = input()
         arr.append(arr_item)
-
     balance(arr)

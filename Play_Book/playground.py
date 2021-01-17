@@ -7,7 +7,7 @@ def pairsArr(s,n,matrix):
 
     for i in range(0,n):
         if i not in stack:
-            stack.append(matrix[i])
+            stack.append(matrix[i]) #consider binary tree
 
             for j in range(i + 1,n):
                 if matrix[i] + matrix[j] == s:
@@ -31,4 +31,6 @@ if __name__ == '__main__':
 
     lib = bigO()
     lib.test_all(pairsArr(sum,n,flat_arr))
+
+
 

@@ -1,5 +1,6 @@
 #Bubble sort - Start
-'''Bubble sort is the one usually taught in introductory CS classes since it clearly demonstrates how sort works while being simple and easy to understand. Bubble sort steps through the list and compares adjacent pairs of elements. The elements are swapped if they are in the wrong order. The pass through the unsorted portion of the list is repeated until the list is sorted. Because Bubble sort repeatedly passes through the unsorted part of the list, it has a worst case complexity of O(n²).
+'''
+Bubble sort steps through the list and compares adjacent pairs of elements. The elements are swapped if they are in the wrong order. The pass through the unsorted portion of the list is repeated until the list is sorted. Because Bubble sort repeatedly passes through the unsorted part of the list, it has a worst case complexity of O(n²).
 '''
 def bubble_sort(arr):
     def swap(i, j):
@@ -21,8 +22,14 @@ def bubble_sort(arr):
 
 #Bubble sort - End
 
-#Selection Sort - Start
-'''Selection sort is also quite simple but frequently outperforms bubble sort. If you are choosing between the two, it’s best to just default right to selection sort. With Selection sort, we divide our input list / array into two parts: the sublist of items already sorted and the sublist of items remaining to be sorted that make up the rest of the list. We first find the smallest element in the unsorted sublist and place it at the end of the sorted sublist. Thus, we are continuously grabbing the smallest unsorted element and placing it in sorted order in the sorted sublist. This process continues iteratively until the list is fully sorted.
+#Selection Sort - Start- O(n*n)
+'''
+Selection sort is also quite simple but frequently outperforms bubble sort. 
+If you are choosing between the two, it’s best to just default right to selection sort. 
+With Selection sort, we divide our input list / array into two parts: the sublist of items already sorted and the sublist of items remaining to be sorted that make up the rest of the list. 
+We first find the smallest element in the unsorted sublist and place it at the end of the sorted sublist. 
+Thus, we are continuously grabbing the smallest unsorted element and placing it in sorted order in the sorted sublist. 
+This process continues iteratively until the list is fully sorted.
 '''
 def selection_sort(arr):
     for i in range(len(arr)):
@@ -40,7 +47,7 @@ def selection_sort(arr):
     return arr
 #Selection Sort - End
 
-#Insertion Sort - Start
+#Insertion Sort - Start- O(n*n)
 '''Insertion sort is both faster and well-arguably more simplistic than both bubble sort and selection sort. Funny enough, it’s how many people sort their cards when playing a card game! On each loop iteration, insertion sort removes one element from the array. It then finds the location where that element belongs within another sorted array and inserts it there. It repeats this process until no input elements remain.
 Image for post
 '''
@@ -60,7 +67,7 @@ def insertion_sort(arr):
 #Insertion Sort - End
 
 
-#Merge Sort
+#Merge Sort- O(n log(n))
 '''Merge sort is a perfectly elegant example of a Divide and Conquer algorithm. It simple uses the 2 main steps of such an algorithm:
 (1) Continuously divide the unsorted list until you have N sublists, where each sublist has 1 element that is “unsorted” and N is the number of elements in the original array.
 (2) Repeatedly merge i.e conquer the sublists together 2 at a time to produce new sorted sublists until all elements have been fully merged into a single sorted array.
@@ -99,8 +106,9 @@ def merge(left, right, merged):
 
 #Merge Sort - End
 
-#Quick Sort - Start
-'''Quick sort is also a divide and conquer algorithm like merge sort. Although it’s a bit more complicated, in most standard implementations it performs significantly faster than merge sort and rarely reaches its worst case complexity of O(n²). It has 3 main steps:
+#Quick Sort - Start-O(n log(n))
+'''
+Quick sort is also a divide and conquer algorithm like merge sort. Although it’s a bit more complicated, in most standard implementations it performs significantly faster than merge sort and rarely reaches its worst case complexity of O(n²). It has 3 main steps:
 (1) We first select an element which we will call the pivot from the array.
 (2) Move all elements that are smaller than the pivot to the left of the pivot; move all elements that are larger than the pivot to the right of the pivot. This is called the partition operation.
 (3) Recursively apply the above 2 steps separately to each of the sub-arrays of elements with smaller and bigger values than the last pivot.
@@ -108,7 +116,7 @@ def merge(left, right, merged):
 
 def partition(array, begin, end):
     pivot_idx = begin
-    for i in xrange(begin + 1, end + 1):
+    for i in range(begin + 1, end + 1):
         if array[i] <= array[begin]:
             pivot_idx += 1
             array[i], array[pivot_idx] = array[pivot_idx], array[i]

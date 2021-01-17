@@ -287,6 +287,7 @@ new_string = ''.join(temp_set)
 print(new_string)
 
 
+
 ##### list comprehension
 original_list = [1,2,3,4]
 new_list = [2*x for x in original_list]
